@@ -1,10 +1,10 @@
 # Simulação de Algoritmos de Escalonamento
 
-[cite\_start]Este é um projeto para a disciplina de Sistemas Operacionais do curso de Ciência da Computação do Instituto Federal de Santa Catarina (IFSC) - Câmpus Lages[cite: 1, 5, 6]. [cite\_start]O objetivo é desenvolver um software que simula diferentes algoritmos de escalonamento para obter informações estatísticas e análises de viabilidade[cite: 10].
+Este é um projeto para a disciplina de Sistemas Operacionais do curso de Ciência da Computação do Instituto Federal de Santa Catarina (IFSC) - Câmpus Lages. O objetivo é desenvolver um software que simula diferentes algoritmos de escalonamento para obter informações estatísticas e análises de viabilidade.
 
 ## ⚙️ Configuração da Simulação
 
-[cite\_start]O simulador deve ser capaz de ler um arquivo de configuração no formato JSON[cite: 11]. Abaixo está um exemplo da estrutura do arquivo:
+O simulador deve ser capaz de ler um arquivo de configuração no formato JSON. Abaixo está um exemplo da estrutura do arquivo:
 
 ```json
 {
@@ -44,64 +44,62 @@
 }
 ```
 
-[cite\_start][cite: 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 24, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 37, 40, 41, 42, 43]
-
 ## 💻 Módulos de Simulação
 
 ### Algoritmos de Escalonamento Tradicionais
 
 #### FCFS (First Come First Served) e SJF (Shortest Job First)
 
-[cite\_start]Para os algoritmos FCFS e SJF, o simulador deve[cite: 51]:
+Para os algoritmos FCFS e SJF, o simulador deve:
 
-  * [cite\_start]Descrever a sequência de execução das tarefas[cite: 52].
-  * [cite\_start]Calcular o nível de utilização do sistema[cite: 52].
-  * [cite\_start]Calcular o *turnaround time* médio de cada tarefa ($TAT\_{avg}^{n}$)[cite: 53].
-  * [cite\_start]Calcular o *turnaround time* médio do sistema ($TAT\_{avg}$)[cite: 54].
-  * [cite\_start]Calcular o *waiting time* médio de cada tarefa ($WT\_{avg}^{n}$)[cite: 55].
-  * [cite\_start]Calcular o *waiting time* médio do sistema ($WT\_{avg}$)[cite: 56].
-  * [cite\_start]Apontar as tarefas com maior e menor *waiting time* médio[cite: 57].
-  * [cite\_start]Apontar se alguma tarefa sofre *starvation*[cite: 57].
+  * Descrever a sequência de execução das tarefas.
+  * Calcular o nível de utilização do sistema.
+  * Calcular o *turnaround time* médio de cada tarefa $TAT\{avg}.
+  * Calcular o *turnaround time* médio do sistema TAT\_{avg}.
+  * Calcular o *waiting time* médio de cada tarefa $WT\_{avg}.
+  * Calcular o *waiting time* médio do sistema $WT\_{avg}.
+  * Apontar as tarefas com maior e menor *waiting time* médio.
+  * Apontar se alguma tarefa sofre *starvation*.
 
 #### RR (Round Robin) e SRTF (Shortest Remaining Time First)
 
-[cite\_start]Para os algoritmos RR e SRTF, o simulador deve[cite: 58]:
+Para os algoritmos RR e SRTF, o simulador deve:
 
-  * [cite\_start]Descrever a sequência de execução das tarefas[cite: 59].
-  * [cite\_start]Calcular o nível de utilização do sistema[cite: 59].
-  * [cite\_start]Calcular o *turnaround time* médio de cada tarefa ($TAT\_{avg}^{n}$)[cite: 60].
-  * [cite\_start]Calcular o *turnaround time* médio do sistema ($TAT\_{avg}$)[cite: 61].
-  * [cite\_start]Calcular o *waiting time* médio de cada tarefa ($WT\_{avg}^{n}$)[cite: 62].
-  * [cite\_start]Calcular o *waiting time* médio do sistema ($WT\_{avg}$)[cite: 63].
-  * [cite\_start]Apontar as tarefas com maior e menor *waiting time* médio[cite: 64].
-  * [cite\_start]Apontar se alguma tarefa sofre *starvation*[cite: 64].
-  * [cite\_start]Apontar as tarefas envolvidas e o momento, caso ocorra inversão de prioridade[cite: 65].
+  * Descrever a sequência de execução das tarefas.
+  * Calcular o nível de utilização do sistema.
+  * Calcular o *turnaround time* médio de cada tarefa TAT\_{avg}.
+  * Calcular o *turnaround time* médio do sistema TAT\_{avg}.
+  * Calcular o *waiting time* médio de cada tarefa WT\_{avg}.
+  * Calcular o *waiting time* médio do sistema WT\_{avg}.
+  * Apontar as tarefas com maior e menor *waiting time* médio.
+  * Apontar se alguma tarefa sofre *starvation*.
+  * Apontar as tarefas envolvidas e o momento, caso ocorra inversão de prioridade.
 
 ### Algoritmos de Escalonamento de Tempo Real
 
 #### RM (Rate Monotonic) e EDF (Earliest Deadline First)
 
-[cite\_start]Para os algoritmos RM e EDF, o simulador deve[cite: 74]:
+Para os algoritmos RM e EDF, o simulador deve:
 
-  * [cite\_start]Realizar e apresentar o resultado do teste de escalonabilidade[cite: 76].
-  * [cite\_start]Descrever a sequência de execução das tarefas, independentemente do resultado do teste[cite: 77].
-  * [cite\_start]Apontar qual tarefa perdeu o *deadline*, em que momento e com qual frequência, caso ocorra[cite: 78].
-  * [cite\_start]Calcular o nível de utilização do sistema[cite: 79].
-  * [cite\_start]Calcular o *turnaround time* médio de cada tarefa ($TAT\_{avg}^{n}$)[cite: 80].
-  * [cite\_start]Calcular o *turnaround time* médio do sistema ($TA{T\_{avg}}$)[cite: 81].
-  * [cite\_start]Calcular o *waiting time* médio de cada tarefa ($WT\_{avg}^{n}$)[cite: 82].
-  * [cite\_start]Calcular o *waiting time* médio do sistema ($WT\_{avg}$)[cite: 83].
-  * [cite\_start]Apontar as tarefas com maior e menor *waiting time* médio[cite: 84].
-  * [cite\_start]Apontar se alguma tarefa sofre *starvation*[cite: 84].
-  * [cite\_start]Apontar as tarefas envolvidas e o momento, caso ocorra inversão de prioridade[cite: 85].
+  * Realizar e apresentar o resultado do teste de escalonabilidade.
+  * Descrever a sequência de execução das tarefas, independentemente do resultado do teste.
+  * Apontar qual tarefa perdeu o *deadline*, em que momento e com qual frequência, caso ocorra.
+  * Calcular o nível de utilização do sistema.
+  * Calcular o *turnaround time* médio de cada tarefa TAT\_{avg}.
+  * Calcular o *turnaround time* médio do sistema TAT\_{avg}.
+  * Calcular o *waiting time* médio de cada tarefa WT\_{avg}.
+  * Calcular o *waiting time* médio do sistema WT\_{avg}.
+  * Apontar as tarefas com maior e menor *waiting time* médio.
+  * Apontar se alguma tarefa sofre *starvation*.
+  * Apontar as tarefas envolvidas e o momento, caso ocorra inversão de prioridade.
 
 ## ℹ️ Instruções Gerais e Avaliação
 
-  * [cite\_start]O desenvolvimento pode ser realizado em dupla[cite: 86].
-  * [cite\_start]A linguagem de programação é de livre escolha[cite: 87].
-  * [cite\_start]A nota será individual e baseada na apresentação em sala de aula[cite: 88].
+  * O desenvolvimento pode ser realizado em dupla.
+  * A linguagem de programação é de livre escolha.
+  * A nota será individual e baseada na apresentação em sala de aula.
 
-[cite\_start]No momento da apresentação, será solicitado[cite: 89]:
+No momento da apresentação, será solicitado:
 
-  * [cite\_start]A abertura e explicação do código fonte[cite: 91].
-  * [cite\_start]A execução e demonstração dos algoritmos com um arquivo de configuração fornecido pelo professor[cite: 92].
+  * A abertura e explicação do código fonte.
+  * A execução e demonstração dos algoritmos com um arquivo de configuração fornecido pelo professor.
